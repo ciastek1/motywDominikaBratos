@@ -1,0 +1,309 @@
+/*
+    Theme Name: Ksiegarnia
+    Author: Dominika Bratos
+    Author URI: https://github.com/ciastek1
+    Description: Motyw na praktyki
+    Version: 1.0.0
+    Tested up to: 6.9
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Georgia', 'Segoe UI', serif;
+    line-height: 1.6;
+    color: #333333;
+    background: linear-gradient(135deg, #f9f5f0 0%, #f4efe9 100%);
+    scroll-behavior: smooth;
+}
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible { 
+    outline: #e67e22 solid 3px;
+    outline-offset: 4px; 
+}
+.header {
+    background: linear-gradient(90deg, #4a2c2c 0%, #2c3e50 100%);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+/* nawigacja */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+.logo a {
+    color: #f9f5f0;
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-family: 'Arial', sans-serif;
+}
+/* menu desktop */
+.nav-list {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+.nav-list a {
+    color: #f9f5f0;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 0.2rem;
+    border-bottom: 2px solid transparent;
+}
+/* przycisk hamburger */
+.nav-toggle {
+    display: none;
+    background: transparent;
+    font-size: 2rem;
+    padding: 0.2rem 1rem;
+    cursor: pointer;
+    line-height: 1;
+}
+/* sekcje */
+section {
+    scroll-margin-top: 80px;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem;
+}
+h2 {
+    font-size: 2.2rem;
+    color: #4a2c2c;
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+}
+/* hero */
+.hero {
+    background: linear-gradient(rgba(104, 92, 92, 0.8), rgba(44, 62, 80, 0.8)), url('../images/zdjecie1.jpg') center/cover no-repeat;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    position: relative;
+}
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+.hero h1 span {
+    color: #c7a17a;
+    font-style: italic;
+}
+.hero p {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+/* przyciski */
+.btn {
+    display: inline-block;
+    background-color: #e67e22;
+    color: #ffffff;
+    padding: 1rem 2.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.btn:hover {
+    transform: scale(1.05) translateY(-3px);
+    box-shadow: 0 6px 15px rgba(230, 126, 34, 0.4);
+}
+/* o nas */
+.about-grid {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.about-text {
+    flex: 1 1 300px;
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(74, 44, 44, 0.1);
+    border: 1px solid #c7a17a;
+}
+.about-img {
+    flex: 1 1 300px;
+    border-radius: 15%;
+    overflow: hidden;
+    box-shadow: 0 20px 30px rgba(0,0,0,0.2);
+    border: 5px solid #c7a17a;
+}
+.about-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+/* oferta */
+.offers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+.card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: all 0.3s;
+    border-bottom: 4px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+.card .emoji {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    filter: drop-shadow(2px 4px 4px rgba(0,0,0,0.1));
+}
+.card h3 {
+    color: #4a2c2c;
+    margin: 1rem 0 0.5rem;
+    font-size: 1.4rem;
+}
+.card p {
+    color: #2c3e50;
+}
+/* Kontakt */
+.contact-grid {
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+    background: linear-gradient(145deg, #f9f5f0, #f4efe9);
+    padding: 2rem;
+    border-radius: 30px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+.contact-info {
+    flex: 1 1 250px;
+    padding: 1.5rem;
+    background: #ffffff;
+    border-radius: 20px;
+    border: 1px dashed #c7a17a;
+}
+.contact-form {
+    flex: 2 1 350px;
+}
+.form-group {
+    margin-bottom: 1.5rem;
+}
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #2d1e1e;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+input,
+textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #e0d6cc;
+    border-radius: 15px;
+    font-family: inherit;
+    font-size: 1rem;
+    background-color: #ffffff;
+    transition: all 0.3s;
+}
+input:focus,
+textarea:focus {
+    border-color: #e67e22;
+    box-shadow: 0 0 0 3px rgba(230, 126, 34, 0.2);
+}
+/* formularz */
+.form-message {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 15px;
+    font-weight: 600;
+    display: none;
+}
+.form-message.success {
+    background: linear-gradient(45deg, #d4edda, #c3e6cb);
+    color: #155724;
+    display: block;
+    border-left: 4px solid #28a745;
+}
+.form-message.error {
+    background: linear-gradient(45deg, #f8d7da, #f5c6cb);
+    color: #721c24;
+    display: block;
+    border-left: 4px solid #dc3545;
+}
+/* stopka */
+.footer {
+    background: linear-gradient(45deg, #2d1e1e, #34495e);
+    color: #f9f5f0;
+    text-align: center;
+    padding: 2.5rem;
+    margin-top: 2rem;
+}
+/* responsywność */
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+    }
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+        background: linear-gradient(90deg,#4a2c2c, #2c3e50);
+        padding: 1rem 0;
+        margin-top: 1rem;
+    }
+    .nav-list.show {
+        display: flex;
+    }
+    .nav-list li {
+        text-align: center;
+        padding: 0.8rem 0;
+    }
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .hero {
+        min-height: 60vh;
+    }
+}
+@media (max-width: 480px) {
+    .container {
+        padding: 2rem 1rem;
+    }
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .logo a {
+        font-size: 1.4rem;
+    }
+}
